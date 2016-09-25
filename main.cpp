@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
         cout<<"A. start game\nB. exit\n"<<endl;
         cout<<"Please enter A or B: "<<endl;
         cin>>userChoice;
-        if(userChoice == 'A'){
+        if(userChoice == 'A' || userChoice == 'a'){
             system("clear");
             cout<<"Please enter the number of initial pebble in every single square: "<<endl;
             cin>>numOfball_input;
@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
             game.initialize();
             game.play();
         }
-    }while(userChoice != 'B');
+    }while(userChoice != 'B' && userChoice != 'b');
     return 0;
 
 }

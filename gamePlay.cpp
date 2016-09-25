@@ -103,8 +103,10 @@ void GamePlay::play(){
     display();
     while(true){
         //user's turn
-        cout<<"Enter which square you want to move: "<<endl;
-        cin>>userMove;
+        do{
+            cout<<"Enter which square you want to move: "<<endl;
+            cin>>userMove;
+        }while(userMove < column || userMove > 2 * column - 1 || gamePad[userMove] == 0);
         getchar();
         distribution(userMove);
         system("clear");
